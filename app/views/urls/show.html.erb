@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @url.url %>
+</p>
+
+<p>
+  <strong>Short url:</strong>
+  <%= link_to @url.short_url, @url.clean_up_url, :target => "_blank" %>
+</p>
+
+<%= link_to 'Edit', edit_url_path(@url) %> |
+<%= link_to 'Back', urls_path %>
